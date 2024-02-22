@@ -5,6 +5,15 @@
 	<head>
 		<link rel="stylesheet" href="css/styles.css">
 		<title> Fly Myrtle </title>
+
+   		 <!-- Load React API -->
+    	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    	<!-- Load React DOM-->
+    	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    	<!-- Load Babel Compiler -->
+    	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+
 		<div class = navigation>
 		<ul>
 			<li><a href = https://www.usca.edu>USCA Main Website &emsp;</a></li>
@@ -13,6 +22,19 @@
 			<li><a href = https://twitter.com>Twitter &emsp;</a></li>
 		</ul>
 		</div>
+
+		<!--Just an attempt at REACT code-->
+		<div id="root"></div>
+		<script id="clock" type="text/babel">
+			//  JSX Babel code goes here
+			function tick() {
+				const element = (<h2>{new Date().toLocaleTimeString()}</h2>);
+				ReactDOM.render(element, document.getElementById('root'));
+			}
+			setInterval(tick, 1000);
+		</script>
+		<!--------------------------------->
+
 	</head>
 
 	<body>
