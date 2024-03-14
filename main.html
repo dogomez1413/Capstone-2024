@@ -3,6 +3,7 @@
 <html xmlns="http://www.flymyrtle.com/main.html">
 
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/styles.css">
 	<title> Fly Myrtle </title>
 	<!-- Load React API -->
@@ -14,16 +15,17 @@
 
 
 	<!--Just an attempt at REACT code-->
-	<div id="root"></div>
-	<script id="clock" type="text/babel">
-		//  JSX Babel code goes here
-		function tick() {
-			const element = (<h2>{new Date().toLocaleTimeString()}</h2>);
-			ReactDOM.render(element, document.getElementById('root'));
-		}
-		setInterval(tick, 1000);
-	</script>
-	<!--------------------------------->
+</head>
+<div id="root"></div>
+<script id="clock" type="text/babel">
+	//  JSX Babel code goes here
+	function tick() {
+		const element = (<h2>{new Date().toLocaleTimeString()}</h2>);
+		ReactDOM.render(element, document.getElementById('root'));
+	}
+	setInterval(tick, 1000);
+</script>
+<!--------------------------------->
 
 </head>
 
