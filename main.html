@@ -1,70 +1,67 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.flymyrtle.com/main.html">
 
-	<head>
-		<link rel="stylesheet" href="css/styles.css">
-		<title> Fly Myrtle </title>
+<head>
+	<link rel="stylesheet" href="css/styles.css">
+	<title> Fly Myrtle </title>
+	<!-- Load React API -->
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<!-- Load React DOM-->
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<!-- Load Babel Compiler -->
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
-   		 <!-- Load React API -->
-    	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    	<!-- Load React DOM-->
-    	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    	<!-- Load Babel Compiler -->
-    	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+	<!--Just an attempt at REACT code-->
+	<div id="root"></div>
+	<script id="clock" type="text/babel">
+		//  JSX Babel code goes here
+		function tick() {
+			const element = (<h2>{new Date().toLocaleTimeString()}</h2>);
+			ReactDOM.render(element, document.getElementById('root'));
+		}
+		setInterval(tick, 1000);
+	</script>
+	<!--------------------------------->
+
+</head>
 
 
-		<div class = navigation>
-		<ul>
-			<li><a href = https://www.usca.edu>USCA Main Website &emsp;</a></li>
-			<li><a href = #contactUs>Contact Information &emsp;</a></li>
-			<li><a href = https://youtube.com>Youtube &emsp;</a></li>
-			<li><a href = https://twitter.com>Twitter &emsp;</a></li>
-		</ul>
+
+<body>
+	<div id=wrap>
+		<div id=header>
+			<h1><a href="#">Fly Myrtle</a></h1>
+			<h2>Welcome to Fly Myrtle, a program made to show flights
+				avaliable to Myrtle, SC for users looking to
+				travel to the city!
+			</h2>
+			<br>
+			<ul>
+				<li><a href=https://www.usca.edu class=button>USCA Main Website</a></li>
+				<li><a href=#contactUs class=button>Contact Information</a></li>
+				<li><a href=https://youtube.com class=button>Youtube</a></li>
+				<li><a href=https://twitter.com class=button>Twitter</a></li>
+			</ul>
+			<br>
 		</div>
 
-		<!--Just an attempt at REACT code-->
-		<div id="root"></div>
-		<script id="clock" type="text/babel">
-			//  JSX Babel code goes here
-			function tick() {
-				const element = (<h2>{new Date().toLocaleTimeString()}</h2>);
-				ReactDOM.render(element, document.getElementById('root'));
-			}
-			setInterval(tick, 1000);
-		</script>
-		<!--------------------------------->
 
-	</head>
 
-	<body>
-		<div class = introduction>
-			<h1>Fly Myrtle</h1>
-			<p>Welcome to Fly Myrtle, a program made to show flights avaliable to Myrtle, SC for users looking to travel to the city!
-            </p>
-		</div>
-		<br>
 
-		<div class = Flights>
+		<div id=flights>
 			<h1>Flights Avaliable</h1>
 		</div>
-		
-		<address>
-			<a id = 'contactUs'>
-				<h1>Contact Information</h1>
-				<p><a href = dogomez@usca.edu>dogomez@usca.edu</a></p>
-				<p><a href = bpayero@usca.edu>bpayero@usca.edu</a></p>
-			</a>
-		</address>
-		
-	</body>
 
-	<footer>
-		<p>&copy; Copyright 2024 David Gomez and Brandon Payero</p>
-		<ul>
-			<li><a href = dogomez@usca.edu>dogomez@usca.edu&emsp;</a></li>
-			<li><a href = bpayero@usca.edu>bpayero@usca.edu&emsp;</a></li>
-		</ul>
-	  </footer>
+		<div id=footer>
+			<p>&copy; Copyright 2024 David Gomez and Brandon Payero</p>
+			<ul>
+				<li><a href=dogomez@usca.edu>dogomez@usca.edu</a></li>
+				<li><a href=bpayero@usca.edu>bpayero@usca.edu</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
 
 </html>
