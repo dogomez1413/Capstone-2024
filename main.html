@@ -51,8 +51,19 @@
 
 				<br>
 
-				<h2>Flights Avaliable</h2>
+				<form action="python/main.py" method="get">
+					<input type="text" id="date" name="date" placeholder="MM/DD/YYYY">
+					<input type="submit" id="submit name=" submit>
+				</form>
 
+				<h2>Flights Avaliable</h2>
+				<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+				<script>
+					$(function () {
+						$("#includeHtml").load("python/Test_Data.html");
+					});
+				</script>
+				<div id="includeHtml"></div>
 			</div>
 		</div>
 
