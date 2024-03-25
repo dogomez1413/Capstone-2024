@@ -106,27 +106,26 @@ class Flight:
         return self._time_arrive
 
     def _classify_arg(self, arg):
-        '''
-        if ('AM' in arg or 'PM' in arg) and len(self._times) < 2 and ':' in arg:
+        if ('AM' in arg or 'PM' in arg) and len(self._times) < 2 and ':' in arg and 'LATAM' not in arg:
             # arrival or departure time
             delta = timedelta(days=0)
             if arg[-2] == '+':
                 delta = timedelta(days=int(arg[-1]))
                 arg = arg[:-2]
-
             date_format = "%Y-%m-%d %I:%M%p"
             self._times += [datetime.strptime(self._date + " " + arg, date_format) + delta]
-        '''
-        if ((not re.match('AM', arg) is None or not re.match('PM', arg) is None)
-                and len(self._times) < 2 and ':' in arg):
-            # arrival or departure time
-            delta = timedelta(days=0)
-            if arg[-2] == '+':
-                delta = timedelta(days=int(arg[-1]))
-                arg = arg[:-2]
-
-            date_format = "%Y-%m-%d %I:%M%p"
-            self._times += [datetime.strptime(self._date + " " + arg, date_format) + delta]
+            '''
+            if ((re.match('AM', arg) or re.match('PM', arg))
+                    and len(self._times) < 2 and ':' in arg):
+                # arrival or departure time
+                delta = timedelta(days=0)
+                if arg[-2] == '+':
+                    delta = timedelta(days=int(arg[-1]))
+                    arg = arg[:-2]
+    
+                date_format = "%Y-%m-%d %I:%M%p"
+                self._times += [datetime.strptime(self._date + " " + arg, date_format) + delta]
+            '''
         elif ('hr' in arg or 'min' in arg) and self._flight_time is None:
             # flight time
             self._flight_time = arg
