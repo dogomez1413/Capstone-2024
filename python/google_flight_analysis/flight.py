@@ -190,10 +190,10 @@ class Flight:
             'Price ($)': [],
             'Num Stops': [],
             'Layover': [],
-            'Access Date': [],
+            # 'Access Date': [],
             # 'Stop Location' : [],
-            'CO2 Emission (kg)': [],
-            'Emission Diff (%)': []
+            # 'CO2 Emission (kg)': [],
+            # 'Emission Diff (%)': []
         }
 
         for flight in flights:
@@ -208,10 +208,10 @@ class Flight:
             data['Num Stops'] += [flight.num_stops]
             data['Layover'] += [flight.stops]
             # data['Stop Location'] += [flight.stops]
-            data['CO2 Emission (kg)'] += [flight.co2]
-            data['Emission Diff (%)'] += [flight.emissions]
+            # data['CO2 Emission (kg)'] += [flight.co2]
+            # data['Emission Diff (%)'] += [flight.emissions]
             data['Price ($)'] += [flight.price]
-            data['Access Date'] += [datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)]
+            # data['Access Date'] += [datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)]
 
         return pd.DataFrame(data)
 
