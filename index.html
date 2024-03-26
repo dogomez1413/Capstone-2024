@@ -52,10 +52,21 @@
 				<form action="python/main.py" method="get">
 					<select id="airportlist">
 						<script>
+
+							var csv_file = File('usairports.csv');
+							csv_file.open('r');
+							csv_file.encoding = 'utf-8';
+							var data = csv_file.read().split('/\r\n|\n/'); // split by lines
+							csv_file.close();
+							for (var row in data) data[row].split(','); // split all lines by comas
+
+							print(data)
+
+
 							var select = document.getElementById("airportlist");
 							var options = [
 								["Alabama", ["Birmingham (BHM)", "BHM"], ["Dothan (DHN)", "DHN"], ["Huntsville (HSV)", "HSV"], ["Mobile (MOB)", "MOB"], ["Montgomery (MGM)", "MGM"]],
-								["Alaska", ["Anchorage (MRI)", "MRI"], ["Anchorage (ANC)", "MRI"], ["Bethel", "BET"]]
+								["Alaska", ["Anchorage (MRI)", "MRI"], ["Anchorage (ANC)", "MRI"], ["Bethel (BET)", "BET"], ["Cordova (CDV)", "CDV"], ["Deadhorse (SCC)", "SCC"], []]
 							];
 							// Populate list with options:
 							for (var i = 0; i < options.length; i++) {
