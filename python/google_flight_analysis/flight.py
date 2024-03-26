@@ -153,13 +153,13 @@ class Flight:
             # or multiple stops
             self._stops = arg
         elif (len(arg) > 0 and arg != 'Separate tickets booked together' and arg != 'Change of airport'
-              and 'MCO' not in arg and 'min' not in arg):
+              and 'MCO' not in arg and 'min' not in arg and 'hr' not in arg and 'CO2e' not in arg):
             # print("arg: " + arg) #debug code
             # print("\n")
             val = arg.split(',')
             if 'American' in val:
                 # print('FOUND SUBSTRING')
-                val = arg.split('Operated')
+                # val = arg.split('Operated')
                 self._airline = 'American'
             else:
                 # print("arg after split: " + arg)  # debug code
@@ -168,7 +168,6 @@ class Flight:
                 self._airline = arg  # Currently gets CO2 instead of airline?? actual CO2 gets 'None'...
         else:
             self._trash += [arg]
-        # get airline and other stuff
 
         if len(self._times) == 2:
             self._time_leave = self._times[0]
