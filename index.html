@@ -50,210 +50,25 @@
 				<br>
 
 				<form action="python/main.py" method="get">
-					<select name="airports" id="airports">
-						<optgroup label="Alabama">
-							<option value="BHM">Birmingham (BHM)</option>
-							<option value="DHN">Dothan (DHN)</option>
-							<option value="HSV"> (Huntsville)</option>
-							<option value="MOB"> (Mobile)</option>
-							<option value="Montgomery"> (MGM)</option>
-						</optgroup>
-
-						<optgroup label="Alaska">
-
-						</optgroup>
-
-						<optgroup label="Arizona">
-
-						</optgroup>
-
-						<optgroup label="Arkansas">
-
-						</optgroup>
-
-						<optgroup label="California">
-
-						</optgroup>
-
-						<optgroup label="Colorado">
-
-						</optgroup>
-
-						<optgroup label="Connecticut">
-
-						</optgroup>
-
-						<optgroup label="Delaware">
-
-						</optgroup>
-
-						<optgroup label="Florida">
-
-						</optgroup>
-
-						<optgroup label="Georgia">
-							<option value="ATL">Atlanta (ATL)</option>
-						</optgroup>
-
-						<optgroup label="Hawaii">
-
-						</optgroup>
-
-						<optgroup label="Idaho">
-
-						</optgroup>
-
-						<optgroup label="Illinois">
-
-						</optgroup>
-
-						<optgroup label="Indiana">
-
-						</optgroup>
-
-						<optgroup label="Iowa">
-
-						</optgroup>
-
-						<optgroup label="Kansas">
-
-						</optgroup>
-
-						<optgroup label="Kentucky">
-
-						</optgroup>
-
-						<optgroup label="Louisiana">
-
-						</optgroup>
-
-						<optgroup label="Maine">
-
-						</optgroup>
-
-						<optgroup label="Maryland">
-
-						</optgroup>
-
-						<optgroup label="Massachusetts">
-
-						</optgroup>
-
-						<optgroup label="Michigan">
-
-						</optgroup>
-
-						<optgroup label="Minnesota">
-
-						</optgroup>
-
-						<optgroup label="Mississippi">
-
-						</optgroup>
-
-						<optgroup label="Missouri">
-
-						</optgroup>
-
-						<optgroup label="Montana">
-
-						</optgroup>
-
-						<optgroup label="Nebraska">
-
-						</optgroup>
-
-						<optgroup label="Nevada">
-
-						</optgroup>
-
-						<optgroup label="New Hampshire">
-
-						</optgroup>
-
-						<optgroup label="New Jersey">
-
-						</optgroup>
-
-						<optgroup label="New Mexico">
-
-						</optgroup>
-
-						<optgroup label="New York">
-
-						</optgroup>
-
-						<optgroup label="North Carolina">
-
-						</optgroup>
-
-						<optgroup label="North Dakota">
-
-						</optgroup>
-
-						<optgroup label="Ohio">
-
-						</optgroup>
-
-						<optgroup label="Oklahoma">
-
-						</optgroup>
-
-						<optgroup label="Oregon">
-
-						</optgroup>
-
-						<optgroup label="Pennsylvania">
-
-						</optgroup>
-
-						<optgroup label="Rhode Island">
-
-						</optgroup>
-
-						<optgroup label="South Carolina">
-							<option value="GSP">Greenville-Spartanburg International Airport (GSP)</option>
-						</optgroup>
-
-						<optgroup label="South Dakota">
-
-						</optgroup>
-
-						<optgroup label="Tennessee">
-
-						</optgroup>
-
-						<optgroup label="Texas">
-
-						</optgroup>
-
-						<optgroup label="Utah">
-
-						</optgroup>
-
-						<optgroup label="Vermont">
-
-						</optgroup>
-
-						<optgroup label="Virginia">
-
-						</optgroup>
-
-						<optgroup label="Washington">
-
-						</optgroup>
-
-						<optgroup label="West Virginia">
-
-						</optgroup>
-
-						<optgroup label="West Virginia">
-
-						</optgroup>
-
-
-
-
+					<select id="airportlist">
+						<script>
+							var select = document.getElementById("airportlist");
+							var options = [
+								["Alabama", ["Birmingham", "BHM"], ["Dothan", "DHN"], ["Huntsville", "HSV"], ["Mobile", "MOB"], ["Montgomery", "MGM"]],
+								["Alaska", ["Anchorage (MRI)", "MRI"], ["Anchorage (ANC)", "MRI"]]
+							];
+							// Populate list with options:
+							for (var i = 0; i < options.length; i++) {
+								var optg = options[i][0];
+								select.innerHTML += "<optgroup label=\"" + optg + "\">" + optg + "</optgroup>";
+
+								for (var j = 1; j < options[i].length; j++) {
+									var opt = options[i][j][0];
+									var code = options[i][j][1];
+									select.innerHTML += "<option value=\"" + code + "\">" + opt + "</option>";
+								}
+							}
+						</script>
 					</select>
 					<input type="text" id="date" name="date" placeholder="YYYY-MM-DD">
 					<input type="submit" id="submit name=" submit>
@@ -280,6 +95,8 @@
 			</ul>
 		</div>
 	</div>
+
+	<script src="js/airport.js"></script>
 </body>
 
 </html>
