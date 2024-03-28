@@ -1,13 +1,16 @@
-from flask import Flask
+from flask import Flask 
+from flask import render_template 
 
-app = Flask(__name__)
-
-
-# Defining the home page of our site
-@app.route("/")  # this sets the route to this page
-def home():
-    return "Hello! this is the main page <h1>HELLO</h1>"  # some basic inline html
+# creates a Flask application 
+app = Flask(__name__) 
 
 
-if __name__ == "__main__":
-    app.run()
+@app.route("/") 
+def hello(): 
+	message = "Hello, World"
+	return render_template('Test_Data.html', 
+						message=message) 
+
+# run the application 
+if __name__ == "__main__": 
+	app.run(debug=True)
