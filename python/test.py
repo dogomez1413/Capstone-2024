@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET","POST"]) 
 def hello(): 
-	print(request.form.get("date"))
+	print(request.form.get("airport"))
+	print(request.form.get("departure"))
+	print(request.form.get("return"))
 	message = "Hello, World"
 	return render_template('index.html', message=message) 
 
