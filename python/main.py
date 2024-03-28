@@ -14,7 +14,7 @@ if __name__ == '__main__':
     # pd.set_option('display.max_columns', 1000)
     # pd.set_option('display.width', 1000)
     # Scrape('ATL', 'MYR', '2024-04-22', '2024-04-24')
-    create_flight_table('GSP', 'MYR', '2024-04-22', '2024-04-24')
+    create_flight_table('MYR', 'GSP', '2024-04-22', '2024-04-24')
 '''
 with pd.option_context('display.max_rows', 3, 'display.max_columns', None):
     display(result.data)
