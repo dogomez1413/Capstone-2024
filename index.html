@@ -56,20 +56,16 @@
 						required>
 					<br>
 					<label for="date">Enter departure date:</label>
-					<input type="date" id="date" name="date"><br>
+					<input type="date" id="departure" name="departure"><br>
 					<label for="date">Enter arrival date:</label>
-					<input type="date" id="date" name="date"><br><br>
+					<input type="date" id="arrival" name="arrival"><br><br>
 					<input type="submit" id="submit name=" submit>
 				</form>
 
 				<h2>Flights Avaliable</h2>
-				<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-				<script>
-					$(function () {
-						$("#includeHtml").load("python/templates/Test_Data.html");
-					});
-				</script>
-				<div id="includeHtml"></div>
+				<iframe src="python/static/Test_Data.html" id="Iframe"></iframe>
+				<object id="table" name="table" data="python/static/Test_Data.html" height="200px"
+					width="1000px"></object>
 			</div>
 		</div>
 
@@ -83,8 +79,6 @@
 			</ul>
 		</div>
 	</div>
-
-	<script src="js/airport.js"></script>
 </body>
 
 </html>
