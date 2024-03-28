@@ -49,7 +49,7 @@
 					travel to the city!</p>
 				<br>
 
-				<form action="python/main.py" method="get">
+				<form action="test.py" method="POST">
 					<label for="airport">Enter departure location:</label>
 					<input type="text" id="airport" placeholder="Airport (Example: ATL)" maxlength="3" minlength="3"
 						required>
@@ -65,7 +65,7 @@
 				<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 				<script>
 					$(function () {
-						$("#includeHtml").load("python/templates/Test_Data.html");
+						$("#includeHtml").load("static/Test_Data.html");
 					});
 				</script>
 				<div id="includeHtml"></div>
