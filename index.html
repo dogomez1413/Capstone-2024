@@ -50,27 +50,9 @@
 				<br>
 
 				<form action="python/main.py" method="get">
-					<label for="airportlist">Enter departure location:</label>
-					<select id="airportlist">
-						<script>
-							var select = document.getElementById("airportlist");
-							var options = [
-								["Alabama", ["Birmingham (BHM)", "BHM"], ["Dothan (DHN)", "DHN"], ["Huntsville (HSV)", "HSV"], ["Mobile (MOB)", "MOB"], ["Montgomery (MGM)", "MGM"]],
-								["Alaska", ["Anchorage (MRI)", "MRI"], ["Anchorage (ANC)", "MRI"], ["Bethel (BET)", "BET"], ["Cordova (CDV)", "CDV"], ["Deadhorse (SCC)", "SCC"], []]
-							];
-							// Populate list with options:
-							for (var i = 0; i < options.length; i++) {
-								var optg = options[i][0];
-								select.innerHTML += "<optgroup label=\"" + optg + "\">" + optg + "</optgroup>";
-
-								for (var j = 1; j < options[i].length; j++) {
-									var opt = options[i][j][0];
-									var code = options[i][j][1];
-									select.innerHTML += "<option value=\"" + code + "\">" + opt + "</option>";
-								}
-							}
-						</script>
-					</select>
+					<label for="airport">Enter departure location:</label>
+					<input type="text" id="airport" placeholder="Airport (Example: ATL)" minlength="3" maxlength="3"
+						pattern="[A-Z]" required>
 					<br>
 					<label for="date">Enter departure date:</label>
 					<input type="date" id="date" name="date"><br>
