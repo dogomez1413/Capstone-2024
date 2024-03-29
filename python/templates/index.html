@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="/static/styles.css">
+	<link rel="stylesheet" href="styles.css">
 	<title> Fly Myrtle </title>
 	<!-- Load React API -->
 	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
@@ -62,13 +62,7 @@
 				</form>
 
 				<h2>Flights Avaliable</h2>
-				<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-				<script>
-					$(function () {
-						$("#includeHtml").load("Test_Data.html");
-					});
-				</script>
-				<div id="includeHtml"></div>
+				<object id="table" name="table" data="Test_Data.html" height="200px" width="1000px"></object>
 			</div>
 		</div>
 
