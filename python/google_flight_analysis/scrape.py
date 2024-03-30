@@ -11,6 +11,8 @@ from datetime import date, datetime, timedelta
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 
 from google_flight_analysis.flight import *
 
@@ -26,13 +28,13 @@ date_format = "%Y-%m-%d"
 	Europe date display vs US date display!
 '''
 
-
 def ScrapeObjects(objs, deep_copy=False):
     if type(objs) is _Scrape:
         objs = [objs]
 
     chromedriver_autoinstaller.install()  # check if chromedriver is installed correctly and on path
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('/home/user/drivers/chromedriver')
+    #driver = webdriver.Chrome()
     driver.maximize_window()
 
     # modifies the objects in-place

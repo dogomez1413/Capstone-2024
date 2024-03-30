@@ -1,5 +1,5 @@
 from flask import Flask 
-from main import create_flight_table
+# from main import create_flight_table
 from flask import render_template, request
 
 # creates a Flask application 
@@ -12,7 +12,7 @@ def hello():
 	# print(request.form.get("departure"))
 	# print(request.form.get("return"))
 	message = "Hello, World"
-	create_flight_table('MYR', request.form.get("airport"), request.form.get("departure"), request.form.get("return"))
+	# create_flight_table('MYR', request.form.get("airport"), request.form.get("departure"), request.form.get("return"))
 	return render_template('index.html', message=message)
 
 # run the application 
