@@ -5,7 +5,7 @@ import chromedriver_autoinstaller
 def create_flight_table(start, destination, start_date, end_date):
     result = Scrape(start, destination, start_date, end_date)  # obtain our scrape object, represents out query
     ScrapeObjects(result)  # runs selenium through ChromeDriver, modifies results in-place
-    result.data.to_html('python/static/Test_Data.html')  # save the data to a html file
+    result.data.to_html('python/static/Test_Data.html', justify='center')  # save the data to a html file
 
 
 # only run for testing if this is main file
