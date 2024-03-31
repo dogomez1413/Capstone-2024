@@ -34,20 +34,20 @@
 			<br>
 		</div>
 
-		<div id="nav">
+		<div id="nav"> <!--Sample Navigation to be later tailored for client-->
 			<ul>
-				<li><a href=https://www.usca.edu class="button">USCA Main Website</a></li>
-				<li><a href=https://youtube.com class="button">Youtube</a></li>
-				<li><a href=https://twitter.com class="button">Twitter</a></li>
+				<li><a href=https://www.usca.edu class="links">USCA Main Website</a></li>
+				<li><a href=https://youtube.com class="links">Youtube</a></li>
+				<li><a href=https://twitter.com class="links">Twitter</a></li>
 			</ul>
 		</div>
 		<div id=body>
-			<div class="left">
+			<div class="content">
 				<p>Welcome to Fly Myrtle, a program made to show flights
 					avaliable to Myrtle, SC for users looking to
 					travel to the city!</p>
 				<br>
-
+				<!--Form for users to fill information to be analyzed by python code-->
 				<form method="POST">
 					<label for="airport">Enter departure location:</label>
 					<input type="text" id="airport" name="airport" placeholder="Airport (Example: ATL)" maxlength="3"
@@ -60,6 +60,7 @@
 					<input type="submit" id="submit name=" submit>
 				</form>
 
+				<!--Displays the output of the flight information for the user based off their entered information-->
 				<h2>Flights Avaliable</h2>
 				<object id="table" name="table" data="../static/Test_Data.html" height="200px" width="1000px"></object>
 			</div>
