@@ -11,7 +11,8 @@ from datetime import date, datetime, timedelta
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
-
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from google_flight_analysis.flight import *
 
 __all__ = ['Scrape', '_Scrape', 'ScrapeObjects']
@@ -25,7 +26,6 @@ date_format = "%Y-%m-%d"
 	advanced filters
 	Europe date display vs US date display!
 '''
-
 
 def ScrapeObjects(objs, deep_copy=False):
     if type(objs) is _Scrape:

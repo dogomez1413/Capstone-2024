@@ -50,16 +50,16 @@ body {
     padding: 10px 20px;
 }
 
-.left {
+.content {
     width: 568px;
     float: left;
 
 }
 
-.left h2 {
+.content h2 {
     color: #fa966f;
-    font-size: 24px;
-    letter-spacing: -3px;
+    font-size: 26px;
+    letter-spacing: -2px;
     font-weight: 100;
     padding: 10px 0 15px 10px;
 }
@@ -73,7 +73,7 @@ body {
     margin-top: 20px;
 }
 
-.button {
+.links {
     font: bold 12px Arial;
     text-decoration: none;
     background-color: #2f422d;
@@ -91,7 +91,6 @@ table {
     font-family: sans-serif;
     border-radius: 10px;
 }
-
 
 th,
 td {

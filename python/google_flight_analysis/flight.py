@@ -157,10 +157,14 @@ class Flight:
             # print("arg: " + arg) #debug code
             # print("\n")
             val = arg.split(',')
-            if 'American' in val:
+            if 'american' in arg.lower():
                 # print('FOUND SUBSTRING')
                 # val = arg.split('Operated')
-                self._airline = 'American'
+                self._airline = 'American Airlines'
+            if 'united' in arg.lower():
+                # print('FOUND SUBSTRING')
+                # val = arg.split('Operated')
+                self._airline = 'United'
             else:
                 # print("arg after split: " + arg)  # debug code
                 # print("\n")
