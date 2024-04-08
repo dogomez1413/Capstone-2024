@@ -6,6 +6,13 @@ body {
     color: #333333;
 }
 
+div#display-error{
+    background: #c4b68b;
+    color: #ff2525;
+    border-radius: 10px;
+    padding: 12px 0 12px 10px;
+}
+
 div#body {
     background: #0a4e6d no-repeat;
     color: #ffffff;

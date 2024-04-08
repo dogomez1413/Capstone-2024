@@ -3,7 +3,7 @@
 ****************************************************************************************************************************************************************/'''
 
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 import chromedriver_autoinstaller
@@ -20,12 +20,13 @@ __all__ = ['Scrape', '_Scrape', 'ScrapeObjects']
 date_format = "%Y-%m-%d"
 '''
 	Iterative scraping
-	If value in DB dont run just return query
+    If value in DB dont run just return query
 	Scraping object overhaul
 	argument change
 	advanced filters
 	Europe date display vs US date display!
 '''
+
 
 def ScrapeObjects(objs, deep_copy=False):
     if type(objs) is _Scrape:
@@ -69,7 +70,7 @@ class _Scrape:
         assert self.type == other.type, "Can't add {a} with {b}. See docs".format(a=self.type, b=other.type)
 
         assert (self.data.empty and other.data.empty) or (
-                    not self.data.empty and not other.data.empty), "Error with addition. Both queries must either be unused or queried."
+                not self.data.empty and not other.data.empty), "Error with addition. Both queries must either be unused or queried."
 
         obj_type = self.type
         if obj_type == 'one-way':
@@ -434,7 +435,7 @@ class _Scrape:
         res3 = res2[start:mid_start] + res2[mid_end:end]
 
         matches = [i for i, x in enumerate(res3) if len(x) > 2 and (
-                    (x[-2] != '+' and (x.endswith('PM') or x.endswith('AM')) and ':' in x) or x[-2] == '+')][::2]
+                (x[-2] != '+' and (x.endswith('PM') or x.endswith('AM')) and ':' in x) or x[-2] == '+')][::2]
         flights = [Flight(date, res3[matches[i]:matches[i + 1]]) for i in range(len(matches) - 1)]
 
         return flights

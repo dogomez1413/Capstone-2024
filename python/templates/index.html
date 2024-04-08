@@ -56,15 +56,20 @@
 						minlength="3" required>
 					<br>
 					<label for="departure">Enter departure date:</label>
-					<input type="date" id="departure" name="departure"><br>
+					<input type="date" id="departure" name="departure" required><br>
 					<label for="return">Enter return date:</label>
-					<input type="date" id="return" name="return"><br><br>
+					<input type="date" id="return" name="return" required><br><br>
 					<input type="submit" id="submit name=" submit>
 				</form>
-
 				<!--Displays the output of the flight information for the user based off their entered information-->
 				<!-- <h2>Flights Avaliable</h2> -->
 				<!--<object id="table" name="table" data="../static/Test_Data.html" height="200px" width="1000px"></object>-->
+				<div id="display-error">
+					<!--Error handling message-->
+					{% block content %}
+						{{ get_flashed_messages() }}
+					{% endblock %}
+				</div>
 			</div>
 		</div>
 
