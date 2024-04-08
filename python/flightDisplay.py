@@ -11,7 +11,9 @@ def hello():
 	# print(request.form.get("airport"))
 	# print(request.form.get("departure"))
 	# print(request.form.get("return"))
+ 	#Triggers when form is submitted. 
 	if request.method == "POST":
+  		#Updates table and sends user to other page
 		create_flight_table('MYR', request.form.get("airport"), request.form.get("departure"), request.form.get("return"))
 		return render_template('table.html')
 	return render_template('index.html')
