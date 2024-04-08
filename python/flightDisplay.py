@@ -12,7 +12,7 @@ def hello():
 	# print(request.form.get("departure"))
 	# print(request.form.get("return"))
 	if request.method == "POST":
-		#create_flight_table('MYR', request.form.get("airport"), request.form.get("departure"), request.form.get("return"))
+		create_flight_table('MYR', request.form.get("airport"), request.form.get("departure"), request.form.get("return"))
 		return render_template('table.html')
 	return render_template('index.html')
 
