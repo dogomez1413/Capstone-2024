@@ -154,8 +154,8 @@ class Flight:
             self._stops = arg
         elif (len(arg) > 0 and arg != 'Separate tickets booked together' and arg != 'Change of airport'
               and 'MCO' not in arg and 'min' not in arg and 'hr' not in arg and 'CO2e' not in arg):
-            print("arg: " + arg) #debug code
-            print("\n")
+            # print("arg: " + arg) #debug code
+            # print("\n")
             # val = arg.split(',', 'Operated')
             val = re.split(',|Operated|by', arg)
             if 'american' in arg.lower():
