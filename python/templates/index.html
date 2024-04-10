@@ -16,8 +16,9 @@
 <body>
 	<div id=wrap>
 		<div id=header>
+			<div id=root></div>
 			<h1><a href="#">Fly Myrtle</a>
-				<div id=root></div>
+
 			</h1>
 			<!--Just an attempt at REACT code-->
 			<h2>
@@ -47,7 +48,7 @@
 					avaliable to Myrtle, SC for users looking to
 					travel to the city!</p>
 
-					<p>Please enter information for a round trip flight to myrtle beach:</p>
+				<p>Please enter information for a round trip flight to myrtle beach:</p>
 				<br>
 				<!--Form for users to fill information to be analyzed by python code-->
 				<form method="POST">
@@ -67,7 +68,7 @@
 				<div id="display-error">
 					<!--Error handling message-->
 					{% block content %}
-						{{ get_flashed_messages() }}
+					{{ get_flashed_messages() }}
 					{% endblock %}
 				</div>
 			</div>

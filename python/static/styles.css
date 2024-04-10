@@ -4,26 +4,26 @@ body {
     font-size: 18px;
     line-height: 18px;
     color: #333333;
-}
-
-div#display-error{
-    background: #c4b68b;
-    color: #ff2525;
-    border-radius: 10px;
-    padding: 12px 0 12px 10px;
+    background-image: url(myrtle.jpg);
+    background-color: #cccccc;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center fixed;
 }
 
 div#body {
-    background: #0a4e6d no-repeat;
+    background: #1b3a2c no-repeat;
     color: #ffffff;
     display: flex;
+    position: center;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    opacity: 0.7;
+    position: center fixed;
 }
 
 div#nav {
-    background: #6ab8ec no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,19 +37,18 @@ div#nav {
 
 #header {
     height: 70px;
-    background: #0a4e6d no-repeat;
     border-radius: 10px;
 }
 
 #header h1 {
-    font-size: 26px;
+    font-size: 40pt;
     font-weight: 100;
     letter-spacing: -3px;
     padding: 12px 0 5px 10px;
 }
 
 #header h1 a {
-    color: #fa966f;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -59,13 +58,13 @@ div#nav {
 }
 
 #header h2 {
-    color: #ccc;
-    font-size: 15px;
+    color: #db4b4b;
+    font-size: 25pt;
     font-weight: 100;
-    padding: 0 0 0 0px;
+    padding: 0 0 0 0;
     letter-spacing: -1px;
     line-height: 12px;
-    float: left;
+    float: right;
     text-align: justify;
 }
 
@@ -76,6 +75,7 @@ div#nav {
 .content {
     width: 568px;
     float: left;
+    opacity: 1;
 
 }
 
@@ -85,6 +85,7 @@ div#nav {
     letter-spacing: -2px;
     font-weight: 100;
     padding: 10px 0 15px 10px;
+    opacity: 1;
 }
 
 #footer {
@@ -101,8 +102,9 @@ div#nav {
     text-decoration: none;
     background-color: #2f422d;
     color: #d38551;
-    padding: 4px 12px 4px 12px;
+    padding: 4px 50px 4px 50px;
     border-radius: 10px;
+    text-align: center;
 }
 
 li {
@@ -131,4 +133,8 @@ th {
 tr {
     background-color: #ffffff;
     border-radius: 10px;
+}
+
+input[type=text]:focus {
+    background-color: rgb(176, 188, 192);
 }
