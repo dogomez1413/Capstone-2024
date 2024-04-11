@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 body {
     background: #f8e8b7;
     font-family: Verdana, Arial, Helvetica, sans-serif;
