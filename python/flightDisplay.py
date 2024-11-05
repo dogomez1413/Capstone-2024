@@ -9,9 +9,6 @@ app.config['SECRET_KEY'] = 'the-most-secret-key'
 
 @app.route("/", methods=["GET", "POST"])
 def hello():
-    # print(request.form.get("airport"))
-    # print(request.form.get("departure"))
-    # print(request.form.get("return"))
     # Triggers when form is submitted.
     if request.method == "POST":
         # Updates table and sends user to other page
